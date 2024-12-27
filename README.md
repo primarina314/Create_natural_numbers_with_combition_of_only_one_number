@@ -1,5 +1,5 @@
-# Create natural numbers with only 4s
-Python code to create natural numbers($n$) with only the specific number($k$) of 4s.
+# Create natural numbers with combination of only one number
+Python code to create natural numbers($n$) with only the specific number($k$) of $p$ s.
 
 It finds out how to make up $n$ with $k$ number of 4s using summations, substractions, mulitplications, divisions.
 
