@@ -3,6 +3,10 @@ Python code to create natural numbers($n$) with only the specific number($k$) of
 
 It finds out how to make up $n$ with $k$ number of 4s using summations, substractions, mulitplications, divisions.
 
+By adjusting $p$, you can find out the way a given natural number can be made up by $p$s.
+
+$p$ is initially set to 4.
+
 # Example
 The below is the results of $n = 0, 1, ..., 999$ and $k=8$.
 
