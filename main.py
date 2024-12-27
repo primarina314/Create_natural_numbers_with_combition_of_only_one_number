@@ -1,10 +1,12 @@
+p = 4
+
 dp = []
 dp_done = []
 for i in range(100):
   dp.append(set())
   dp_done.append(False)
 dp_done[0] = dp_done[1] = True
-dp[1].add(4)
+dp[1].add(p)
 
 def fill_up(k):
   # bottom-up approach
@@ -22,7 +24,7 @@ def fill_up(k):
         dp[k].add(item1 * item2)
         if(item2 > 0 and item1 % item2 == 0):
           dp[k].add(item1 // item2)
-  dp_done[k] = True    
+  dp_done[k] = True
   return
 fill_up(10)
 print(sorted(dp[1]))
@@ -48,13 +50,13 @@ print(len(dp[9]))
 print(len(dp[10]))
 
 dp_string = {}
-dp_string[(4, 1)] = "4"
+dp_string[(p, 1)] = f"{p}"
 
 def f(n, k):
   # Check if the result is already computed
   if (n, k) in dp_string:
     return dp_string[(n, k)]
-  
+
   # determine whether it's possible or not in advance
   if not n in dp[k]:
     dp_string[(n, k)] = "impossible"
@@ -83,7 +85,7 @@ def f(n, k):
         if((n // item) in dp[k - j]):
           dp_string[(n, k)] = "(" + f(item, j) + " * " + f(n // item, k - j) + ")"
           return dp_string[(n, k)]
-      
+
       if(n == 0 and 0 in dp[k - j]):
         dp_string[(n, k)] = "(" + f(item, j) + " * " + f(0, k - j) + ")"
         return dp_string[(n, k)]
@@ -108,6 +110,5 @@ def calculate_f(n, k):
 # k = 5 # Change to desired k
 # print(calculate_f(n, k))
 
-for i in range(500):
-  print(f"{i}: {calculate_f(i, 6)}")
-  calculate_f(i, 5)
+for i in range(1000):
+  print(f"{i}: {calculate_f(i, 8)}")
