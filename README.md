@@ -8,7 +8,7 @@ By adjusting $p$, you can find out the way a given natural number can be made up
 $p$ is initially set to 4.
 
 # Example
-The below is the results of $n = 0, 1, ..., 999$ and $k=8$.
+The below is the results of $n = 0, 1, ..., 999$ and $k=8$ when $p$ is set to 4.
 
 0: (4 - (4 - (4 - (4 - (4 - (4 - (4 - 4)))))))
 
