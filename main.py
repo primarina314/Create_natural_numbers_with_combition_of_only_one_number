@@ -10,6 +10,12 @@ def f(n, k, dp_bool, dp_string):
     # Initialize the result as False
     res_bool = False
     res_string = ""
+    # 합: 1 ~ n/2
+    # 곱: 1 ~ sqrt(n) 중 약수
+    # 차: 1 ~ (n-1) 개로 만들 수 있는 최대값 - very sparse
+    # 제: 1 ~ (n-1) 개로 만들 수 있는 최대값 - very sparse
+    # 주어진 k 에 대해 k 개로 만들 수 있는 수들의 집합을 만들고 이 안에서 순회.
+    
     # Loop through all possible values of i and j for the summations
     for i in range(1, 200):
       # loop 범위 pow4
